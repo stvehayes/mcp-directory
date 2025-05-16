@@ -45,40 +45,32 @@ function ColorModeSwitcher() {
     const current = schemes.find((scheme) => scheme.value === colorScheme)
 
     return (
-        <Box sx={{ position: 'absolute', top: 0, right: 0, p: 3 }}>
-            <Box
-                sx={{
-                    position: 'relative',
-                    display: 'flex',
-                    justifyContent: 'flex-end',
-                }}
-            >
-                <ActionMenu>
-                    <ActionMenu.Button size="small">
-                        <current.icon />
-                        <Box sx={{ display: 'inline-block', ml: 2 }}>
-                            {' '}
-                            {current.name}
-                        </Box>
-                    </ActionMenu.Button>
-                    <ActionMenu.Overlay align="right">
-                        <ActionList showDividers>
-                            <ActionList.Group selectionVariant="single">
-                                {schemes.map((scheme) => (
-                                    <ActionList.Item
-                                        key={scheme.value}
-                                        href="#"
-                                        selected={scheme.value === colorScheme}
-                                        onSelect={() => setScheme(scheme.value)}
-                                    >
-                                        {scheme.name}
-                                    </ActionList.Item>
-                                ))}
-                            </ActionList.Group>
-                        </ActionList>
-                    </ActionMenu.Overlay>
-                </ActionMenu>
-            </Box>
+        <Box>
+            <ActionMenu>
+                <ActionMenu.Button size="small">
+                    <current.icon />
+                    <Box sx={{ display: 'inline-block', ml: 2 }}>
+                        {' '}
+                        {current.name}
+                    </Box>
+                </ActionMenu.Button>
+                <ActionMenu.Overlay align="right">
+                    <ActionList showDividers>
+                        <ActionList.Group selectionVariant="single">
+                            {schemes.map((scheme) => (
+                                <ActionList.Item
+                                    key={scheme.value}
+                                    href="#"
+                                    selected={scheme.value === colorScheme}
+                                    onSelect={() => setScheme(scheme.value)}
+                                >
+                                    {scheme.name}
+                                </ActionList.Item>
+                            ))}
+                        </ActionList.Group>
+                    </ActionList>
+                </ActionMenu.Overlay>
+            </ActionMenu>
         </Box>
     )
 }

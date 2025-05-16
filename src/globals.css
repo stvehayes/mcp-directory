@@ -38,12 +38,3 @@ li {
   font-size: var(--text-body-size-medium);
   line-height: var(--text-body-lineHeight-large);
 }
-
-body {
-  overflow: hidden;
-}
-
-#root,
-#root > div {
-  min-height: 100vh
-}

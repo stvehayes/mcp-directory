@@ -1,13 +1,7 @@
-import Playground from '../components/Playground.jsx'
-import ColorModeSwitcher from '../components/ColorModeSwitcher.jsx'
+import Directory from './Directory.jsx'
 
-function Code() {
-    return (
-      <>
-        <Playground />
-        <ColorModeSwitcher />
-      </>
-    )
+function Home() {
+    return <Directory />
 }
 
-export default Code
+export default Home

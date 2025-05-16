@@ -1,12 +1,12 @@
 import { ThemeProvider, BaseStyles } from '@primer/react'
-
-import Playground from './Playground'
+import Directory from './Directory'
 import ColorModeSwitcher from './ColorModeSwitcher'
+
 function App() {
     return (
         <ThemeProvider colorMode="auto">
             <BaseStyles>
-                <Playground />
+                <Directory />
                 <ColorModeSwitcher />
             </BaseStyles>
         </ThemeProvider>
